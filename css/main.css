@@ -1,0 +1,61 @@
+header {
+    background-image: url("../IMG/wp7420469.jpg");
+    background-size: cover;
+    background-position: center;
+}
+header > nav {
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header > nav > h3:first-child{
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 2em;
+
+}
+span[data-text]::after{
+    content: attr(data-text);
+    color: transparent;
+    background-image: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: rainbow 1s infinite;
+    font-size: 1.5em;
+}
+@keyframes rainbow {
+    0% {  background-position: 0 50%;
+    }
+    50% { background-position: 100% 50%;
+    }
+    100% {background-position: 200% 50%;
+    }
+}
+span[data-text] + span {
+    text-shadow: 0 2px 0 cyan, 2px 0 0 magenta, -2px -2px 0 yellow;
+
+}
+
+header > nav > menu{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  
+}
+header > nav > menu a{
+    color: rgb(255, 255, 255);
+    transition: font-size .3s ease, color .3s ease;
+}
+header > nav > menu a:hover{
+    color: rgb(36, 13, 121);
+    font-size:1.2em;
+}
